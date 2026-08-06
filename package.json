@@ -1,0 +1,8 @@
+{
+  "name": "artem-alekseev-ege-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": { "start": "node server.mjs" },
+  "engines": { "node": ">=20" }
+}
