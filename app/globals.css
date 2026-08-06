@@ -9,3 +9,33 @@
 @media(max-width:1000px){.nav nav{display:none}.hero{grid-template-columns:1fr;min-height:auto;padding-top:100px}.heroCopy{max-width:800px}.heroVisual{height:580px;width:min(600px,100%);margin:auto}.statsGrid{grid-template-columns:1fr 1fr}.statsGrid>div:nth-child(2){border-right:0}.priceGrid{grid-template-columns:1fr}.priceCard{min-height:520px}.advGrid{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr;gap:55px}.aboutPhoto{height:650px}.reviewGrid{grid-template-columns:1fr}.footerTop{grid-template-columns:1fr 1fr}.footerTop>.button{grid-column:1/-1;width:max-content}}
 @media(max-width:650px){.shell{width:min(100% - 28px,1240px)}.nav{height:70px}.brand b{display:none}.navCta{font-size:0}.navCta span{font-size:16px;margin:0}.hero{padding-top:65px}.hero h1{font-size:53px}.lead{font-size:16px}.heroActions{flex-direction:column}.button{width:100%}.heroMeta{display:none}.heroVisual{height:490px}.heroVisual img{height:465px}.scoreCard{left:0;bottom:25px;padding:15px 18px}.scoreCard strong{font-size:48px}.status{right:0;top:80px}.code{display:none}.stats,.formats,.system,.reviews,.faq{padding:65px 0}.statsGrid{grid-template-columns:1fr 1fr}.statsGrid>div{padding:25px 18px}.statsGrid strong{font-size:42px}.sectionHead{display:block;margin-bottom:35px}.sectionHead h2,.about h2,.trial h2,.faq h2{font-size:46px}.sectionHead>p{margin-top:24px}.advGrid{grid-template-columns:1fr}.advGrid article{min-height:250px}.about{padding:70px 0}.aboutPhoto{height:500px}.facts{grid-template-columns:1fr}.facts>div+div{border-left:0;border-top:1px solid var(--line);padding-left:0}.externalReviews{flex-direction:column;gap:12px}.trial{width:calc(100% - 28px);margin-top:60px;margin-bottom:60px;padding:70px 20px;min-height:520px}.trial h2{font-size:43px}.faqList button{grid-template-columns:36px 1fr 30px}.faqList button strong{font-size:16px}.faqList article>div p{margin-left:36px}.footerTop{grid-template-columns:1fr}.footerBottom{flex-direction:column;gap:8px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Motion pass */
+.ticker .tickerTrack{display:flex;width:max-content;animation:marquee 26s linear infinite;will-change:transform}
+.tickerTrack>span{display:block;flex:none}
+.heroVisual:before{animation:orbreathe 6s ease-in-out infinite}
+.heroVisual img{animation:floatPhoto 6.5s ease-in-out infinite;will-change:transform}
+.scoreCard{animation:floatCard 5.2s ease-in-out infinite;will-change:transform}
+.status{animation:floatStatus 4.7s .4s ease-in-out infinite;will-change:transform}
+.code{will-change:transform}
+.codeOne{animation:floatCode 5.8s .2s ease-in-out infinite}
+.codeTwo{animation:floatCode 6.4s 1s ease-in-out infinite reverse}
+.statsGrid>div{transition:transform .35s ease,background .35s ease}
+.statsGrid>div:hover{transform:translateY(-7px);background:linear-gradient(145deg,rgba(155,98,255,.12),transparent)}
+.statsGrid strong{display:inline-block;transition:transform .35s ease,color .35s ease}
+.statsGrid>div:hover strong{transform:scale(1.04);color:#b681ff}
+.advIcon{transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
+.advGrid article:hover .advIcon{transform:translateY(-5px) rotate(-5deg);box-shadow:0 12px 35px rgba(155,98,255,.22)}
+.reviewGrid article{transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+.reviewGrid article:hover{transform:translateY(-7px) rotate(.25deg);border-color:rgba(155,98,255,.45);box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.aboutPhoto{animation:aboutFloat 7s ease-in-out infinite;will-change:transform}
+.facts>div{transition:transform .3s ease}
+.facts>div:hover{transform:translateY(-5px)}
+
+@keyframes floatPhoto{0%,100%{transform:translate3d(0,0,0) rotate(.001deg)}50%{transform:translate3d(0,-13px,0) rotate(.35deg)}}
+@keyframes floatCard{0%,100%{transform:translate3d(0,0,0) rotate(-.35deg)}50%{transform:translate3d(7px,-15px,0) rotate(.5deg)}}
+@keyframes floatStatus{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(-6px,-10px,0)}}
+@keyframes floatCode{0%,100%{transform:translate3d(0,0,0);opacity:.55}50%{transform:translate3d(5px,-9px,0);opacity:1}}
+@keyframes orbreathe{0%,100%{transform:scale(.97);opacity:.65}50%{transform:scale(1.04);opacity:1}}
+@keyframes aboutFloat{0%,100%{transform:translate3d(0,0,0) rotate(-.15deg)}50%{transform:translate3d(0,-10px,0) rotate(.2deg)}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}

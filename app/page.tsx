@@ -61,7 +61,12 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="ticker"><div>ЕГЭ ПО ИНФОРМАТИКЕ <b>✦</b> MINI GROUPS <b>✦</b> PYTHON <b>✦</b> ЛИЧНАЯ ПРОВЕРКА <b>✦</b> ЕГЭ ПО ИНФОРМАТИКЕ <b>✦</b> MINI GROUPS <b>✦</b> PYTHON <b>✦</b></div></div>
+      <div className="ticker" aria-hidden="true">
+        <div className="tickerTrack">
+          <span>ЕГЭ ПО ИНФОРМАТИКЕ <b>✦</b> MINI GROUPS <b>✦</b> PYTHON <b>✦</b> ЛИЧНАЯ ПРОВЕРКА <b>✦</b> ЗАПИСИ ЗАНЯТИЙ <b>✦</b></span>
+          <span>ЕГЭ ПО ИНФОРМАТИКЕ <b>✦</b> MINI GROUPS <b>✦</b> PYTHON <b>✦</b> ЛИЧНАЯ ПРОВЕРКА <b>✦</b> ЗАПИСИ ЗАНЯТИЙ <b>✦</b></span>
+        </div>
+      </div>
 
       <section className="stats shell" id="results">
         <div className="sectionTag">[ РЕЗУЛЬТАТЫ // 2026 ]</div>
