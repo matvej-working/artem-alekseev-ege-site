@@ -52,7 +52,7 @@ export default function Home() {
 
         <div className="heroPortrait">
           <div className="portraitHalo" aria-hidden="true" />
-          <img src="/artem-about.jpg" alt="Артём Алексеев — преподаватель информатики" />
+          <img src="/artem-hero-cutout-v2.png" alt="Артём Алексеев — преподаватель информатики" />
         </div>
 
         <div className="heroFloat heroFloatScore">

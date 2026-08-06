@@ -10,6 +10,15 @@
 @media(max-width:650px){.shell{width:min(100% - 28px,1240px)}.nav{height:70px}.brand b{display:none}.navCta{font-size:0}.navCta span{font-size:16px;margin:0}.hero{padding-top:65px}.hero h1{font-size:53px}.lead{font-size:16px}.heroActions{flex-direction:column}.button{width:100%}.heroMeta{display:none}.heroVisual{height:490px}.heroVisual img{height:465px}.scoreCard{left:0;bottom:25px;padding:15px 18px}.scoreCard strong{font-size:48px}.status{right:0;top:80px}.code{display:none}.stats,.formats,.system,.reviews,.faq{padding:65px 0}.statsGrid{grid-template-columns:1fr 1fr}.statsGrid>div{padding:25px 18px}.statsGrid strong{font-size:42px}.sectionHead{display:block;margin-bottom:35px}.sectionHead h2,.about h2,.trial h2,.faq h2{font-size:46px}.sectionHead>p{margin-top:24px}.advGrid{grid-template-columns:1fr}.advGrid article{min-height:250px}.about{padding:70px 0}.aboutPhoto{height:500px}.facts{grid-template-columns:1fr}.facts>div+div{border-left:0;border-top:1px solid var(--line);padding-left:0}.externalReviews{flex-direction:column;gap:12px}.trial{width:calc(100% - 28px);margin-top:60px;margin-bottom:60px;padding:70px 20px;min-height:520px}.trial h2{font-size:43px}.faqList button{grid-template-columns:36px 1fr 30px}.faqList button strong{font-size:16px}.faqList article>div p{margin-left:36px}.footerTop{grid-template-columns:1fr}.footerBottom{flex-direction:column;gap:8px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
+/* Transparent close portrait */
+.heroPortrait{top:8px;bottom:auto;width:min(760px,62vw);height:1120px}
+.heroPortrait:after{display:none}
+.heroPortrait img{width:100%;height:auto;object-fit:contain;object-position:center top;filter:saturate(.82) contrast(1.06) brightness(.92);mask-image:none}
+.portraitHalo{top:35%;width:78%}
+@media(max-width:1000px){.heroPortrait{top:38px;width:min(720px,76vw);height:1080px}}
+@media(max-width:650px){.heroPortrait{top:90px;width:135%;height:900px}.heroPortrait img{object-position:center top}.portraitHalo{top:31%;width:72%}.heroCenterTitle{z-index:3}.heroFloatStatus,.heroFloatScore{z-index:6}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
 /* Centered portrait hero */
 .heroCentered{height:min(850px,calc(100vh - 82px));min-height:720px;position:relative;display:grid;place-items:center;overflow:hidden;isolation:isolate}
 .heroCentered:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(155,98,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(155,98,255,.045) 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(to bottom,#000,transparent 92%);z-index:-3}
