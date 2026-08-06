@@ -40,36 +40,24 @@ export default function Home() {
         <a className="navCta" href={tgTrial} target="_blank" rel="noreferrer">Записаться бесплатно <span>↗</span></a>
       </header>
 
-      <section className="heroCentered shell" id="top">
-        <div className="heroCenterGlow" aria-hidden="true" />
-        <div className="heroCenterEyebrow"><i /> Подготовка к ЕГЭ по информатике · онлайн</div>
-
-        <h1 className="heroCenterTitle">
-          <span className="titleLeft">ЕГЭ БЕЗ</span>
-          <span className="titleRight">ПАНИКИ.</span>
-          <em>НА ПОНЯТНОМ.</em>
-        </h1>
-
-        <div className="heroPortrait">
-          <div className="portraitHalo" aria-hidden="true" />
-          <img src="/artem-hero-cutout-v2.png" alt="Артём Алексеев — преподаватель информатики" />
+      <section className="hero shell" id="top">
+        <div className="heroGlow" />
+        <div className="heroCopy">
+          <div className="eyebrow"><i /> Подготовка к ЕГЭ по информатике · онлайн</div>
+          <h1>ЕГЭ без паники.<br /><em>На понятном.</em></h1>
+          <p className="lead">Разберём информатику с нуля, выстроим систему и доведём до результата — в небольшой группе и без безликих вебинаров.</p>
+          <div className="heroActions">
+            <a className="button primary" href={tgTrial} target="_blank" rel="noreferrer">Записаться на бесплатный урок <span>↗</span></a>
+            <a className="button ghost" href="#format">Посмотреть форматы <span>↓</span></a>
+          </div>
+          <div className="heroMeta"><span>Диагностика знаний</span><span>Курс по Python в подарок</span><span>Чек-листы подготовки</span></div>
         </div>
-
-        <div className="heroFloat heroFloatScore">
-          <small>СРЕДНИЙ БАЛЛ 2026</small>
-          <strong>83,2</strong><span> / 100</span>
-        </div>
-        <div className="heroFloat heroFloatStatus"><i /> НАБОР ОТКРЫТ</div>
-        <div className="heroFloat heroFloatCode">score = <b>98</b><br />while not ready:<br />&nbsp;&nbsp;practice()</div>
-        <div className="heroFloat heroFloatMini">
-          <span>4–6</span>
-          <small>человек<br />в группе</small>
-        </div>
-
-        <p className="heroCenterLead">Разберём информатику с нуля, выстроим систему и доведём до результата — без безликих вебинаров.</p>
-        <div className="heroCenterActions">
-          <a className="button primary" href={tgTrial} target="_blank" rel="noreferrer">Записаться на бесплатный урок <span>↗</span></a>
-          <a className="heroScroll" href="#results">листай вниз <span>↓</span></a>
+        <div className="heroVisual">
+          <div className="code codeOne">score = <b>98</b></div>
+          <div className="code codeTwo">while not ready:<br />&nbsp;&nbsp;practice()</div>
+          <img src="/artem-hero.jpg" alt="Артём Алексеев — преподаватель информатики" />
+          <div className="scoreCard"><small>СРЕДНИЙ БАЛЛ 2026</small><strong>83,2</strong><span>из 100</span></div>
+          <div className="status"><i /> набор открыт</div>
         </div>
       </section>
 
