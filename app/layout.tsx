@@ -6,9 +6,21 @@ const geist = Geist({ variable: "--font-sans", subsets: ["latin", "cyrillic"] })
 const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
-  title: "Артём Алексеев — подготовка к ЕГЭ по информатике",
-  description: "Онлайн-подготовка к ЕГЭ по информатике в мини-группах. Средний балл выпускников — 83,2. Бесплатное пробное занятие.",
+  metadataBase: new URL("https://artem-alekseev-ege.matvej-working.chatgpt.site"),
+  title: "Артём Александрович — подготовка к ЕГЭ по информатике",
+  description: "Системная онлайн-подготовка к ЕГЭ по информатике в мини-группах — средний балл выпускников 83.2 и бесплатное пробное занятие",
   icons: { icon: "/aa-logo.jpg", shortcut: "/aa-logo.jpg" },
+  openGraph: {
+    title: "Артём Александрович — ЕГЭ по информатике",
+    description: "Живые занятия, личная проверка и понятный маршрут до уверенной сдачи ЕГЭ",
+    images: [{ url: "/og.png", width: 1536, height: 864, alt: "Артём Александрович — ЕГЭ по информатике" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Артём Александрович — ЕГЭ по информатике",
+    description: "Системная подготовка и средний балл 83.2",
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
