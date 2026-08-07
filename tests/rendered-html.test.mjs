@@ -42,7 +42,7 @@ test("keeps core conversion links available", async () => {
   assert.match(html, /https:\/\/www\.tiktok\.com\/@aa_infa/);
   assert.match(html, /https:\/\/t\.me\/aa_otzivi/);
   assert.match(html, /https:\/\/www\.avito\.ru\/brands\/aainfa/);
-  assert.match(html, /Мой Telegram/);
-  assert.match(html, /Мой TikTok/);
+  assert.match(html, />Telegram</);
+  assert.match(html, />TikTok</);
   assert.match(html, /Бесплатное пробное занятие/);
 });

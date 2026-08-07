@@ -56,7 +56,7 @@ export default function Home() {
         <nav aria-label="Основная навигация">
           <a href="#format">Форматы</a><a href="#results">Результаты</a><a href="#about">Обо мне</a><a href="#reviews">Отзывы</a>
         </nav>
-        <div className="navRight"><div className="topSocials"><a href="https://t.me/AA_infa" target="_blank" rel="noreferrer" aria-label="Мой Telegram"><i>✈</i><span>Мой Telegram</span></a><a href="https://www.tiktok.com/@aa_infa" target="_blank" rel="noreferrer" aria-label="Мой TikTok"><i>♪</i><span>Мой TikTok</span></a></div><a className="navCta" href={tgTrial} target="_blank" rel="noreferrer">Бесплатная диагностика <span>↗</span></a></div>
+        <div className="navRight"><div className="topSocials"><a href="https://t.me/AA_infa" target="_blank" rel="noreferrer">Telegram</a><a href="https://www.tiktok.com/@aa_infa" target="_blank" rel="noreferrer">TikTok</a></div><a className="navCta" href={tgTrial} target="_blank" rel="noreferrer">Бесплатная диагностика <span>↗</span></a></div>
       </header>
 
       <section className="hero shell" id="top">
@@ -82,6 +82,8 @@ export default function Home() {
 
       <div className="ticker" aria-hidden="true">
         <div className="tickerTrack">
+          <span>ЕГЭ ПО ИНФОРМАТИКЕ <b>✦</b> MINI GROUPS <b>✦</b> PYTHON <b>✦</b> ЛИЧНАЯ ПРОВЕРКА <b>✦</b> ЗАПИСИ ЗАНЯТИЙ <b>✦</b></span>
+          <span>ЕГЭ ПО ИНФОРМАТИКЕ <b>✦</b> MINI GROUPS <b>✦</b> PYTHON <b>✦</b> ЛИЧНАЯ ПРОВЕРКА <b>✦</b> ЗАПИСИ ЗАНЯТИЙ <b>✦</b></span>
           <span>ЕГЭ ПО ИНФОРМАТИКЕ <b>✦</b> MINI GROUPS <b>✦</b> PYTHON <b>✦</b> ЛИЧНАЯ ПРОВЕРКА <b>✦</b> ЗАПИСИ ЗАНЯТИЙ <b>✦</b></span>
           <span>ЕГЭ ПО ИНФОРМАТИКЕ <b>✦</b> MINI GROUPS <b>✦</b> PYTHON <b>✦</b> ЛИЧНАЯ ПРОВЕРКА <b>✦</b> ЗАПИСИ ЗАНЯТИЙ <b>✦</b></span>
         </div>

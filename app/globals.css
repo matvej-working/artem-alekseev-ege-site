@@ -138,3 +138,33 @@
 @keyframes orbreathe{0%,100%{transform:scale(.97);opacity:.65}50%{transform:scale(1.04);opacity:1}}
 @keyframes aboutFloat{0%,100%{transform:translate3d(0,0,0) rotate(-.15deg)}50%{transform:translate3d(0,-10px,0) rotate(.2deg)}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Final showcase layout */
+.topSocials{display:flex;gap:10px}
+.topSocials a{width:auto;min-width:116px;height:43px;padding:0 22px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.16);border-radius:11px;background:rgba(255,255,255,.025);font:800 12px var(--font-mono);letter-spacing:.02em;transition:.3s}
+.topSocials a:hover{transform:translateY(-3px);border-color:rgba(155,98,255,.75);background:rgba(155,98,255,.11);box-shadow:0 16px 38px rgba(86,35,178,.22)}
+.ticker{position:relative;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%)}
+.ticker:before,.ticker:after{content:"";position:absolute;z-index:2;top:0;bottom:0;width:11vw;pointer-events:none}
+.ticker:before{left:0;background:linear-gradient(90deg,#07070a,transparent)}
+.ticker:after{right:0;background:linear-gradient(-90deg,#07070a,transparent)}
+.ticker .tickerTrack{display:flex;width:max-content;animation:tickerLoop 58s linear infinite;will-change:transform}
+.tickerTrack>span{display:block;flex:none}
+@keyframes tickerLoop{to{transform:translateX(-50%)}}
+
+.inside .screenWall{display:flex;flex-direction:column;gap:110px;align-items:stretch}
+.inside .screenCard,.inside .screenCard.wide,.inside .screenCard:nth-child(even){display:flex;flex-direction:column;width:100%;grid-column:auto;gap:0;padding:0;border:0;background:transparent;box-shadow:none;border-radius:0;overflow:visible;animation:none;transform:none}
+.inside .screenCard:hover{transform:none;border:0;box-shadow:none}
+.inside .screenCard .screenImage,.inside .screenCard:nth-child(even) .screenImage{order:1;position:relative;width:100%;display:block;padding:0;border-radius:25px;overflow:hidden;background:#fff;box-shadow:0 40px 120px rgba(0,0,0,.62),0 0 65px rgba(107,48,222,.12);transition:.5s cubic-bezier(.2,.8,.2,1)}
+.inside .screenCard .screenImage:before{content:"";position:absolute;z-index:2;inset:0;box-shadow:inset 45px 0 55px -35px rgba(5,5,8,.72),inset -45px 0 55px -35px rgba(5,5,8,.72),inset 0 -35px 55px -38px rgba(5,5,8,.5);pointer-events:none}
+.inside .screenCard .screenImage:after{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(115deg,rgba(155,98,255,.07),transparent 24%,transparent 76%,rgba(155,98,255,.06));pointer-events:none}
+.inside .screenCard .screenImage img,.inside .screenCard.tall .screenImage img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center;transform:none;filter:none;transition:.55s cubic-bezier(.2,.8,.2,1)}
+.inside .screenCard:hover .screenImage{transform:translateY(-7px);box-shadow:0 52px 145px rgba(0,0,0,.7),0 0 85px rgba(107,48,222,.18)}
+.inside .screenCard:hover .screenImage img{transform:scale(1.006);filter:none}
+.inside .screenImage span{right:20px;top:20px;width:44px;height:44px}
+.inside .screenCard .screenCopy,.inside .screenCard:nth-child(even) .screenCopy,.inside .screenCard>div:last-child{order:2;width:min(820px,100%);padding:32px 4px 0;display:grid;grid-template-columns:180px 1fr;column-gap:32px;justify-content:initial}
+.inside .screenCopy small{grid-row:1/4;margin:5px 0 0;font:800 10px var(--font-mono);letter-spacing:.18em;color:var(--violet)}
+.inside .screenCard .screenCopy h3{font-size:clamp(30px,4vw,54px);line-height:1;letter-spacing:-.05em;margin:0 0 15px}
+.inside .screenCard .screenCopy p{font-size:15px;line-height:1.7;margin:0;color:#a8a2af;max-width:680px}
+.inside .screenCopy b{display:none}
+@media(max-width:800px){.inside .screenWall{gap:70px}.inside .screenCard .screenCopy,.inside .screenCard:nth-child(even) .screenCopy,.inside .screenCard>div:last-child{grid-template-columns:1fr;padding-top:24px}.inside .screenCopy small{grid-row:auto;margin:0 0 14px}.inside .screenImage span{width:36px;height:36px;right:12px;top:12px}}
+@media(max-width:650px){.topSocials{display:flex;gap:6px}.topSocials a{min-width:74px;height:38px;padding:0 10px;font-size:9px}.inside .screenCard .screenImage,.inside .screenCard:nth-child(even) .screenImage{border-radius:16px}.inside .screenCard .screenImage:before{box-shadow:inset 25px 0 32px -24px rgba(5,5,8,.72),inset -25px 0 32px -24px rgba(5,5,8,.72)}}
