@@ -27,16 +27,10 @@ const faqs = [
 ];
 
 const learningScreens = [
-  { src: "/process-plan.png", title: "План на 38 занятий", text: "Темы, даты, посещаемость и записи всегда перед глазами", kind: "wide" },
-  { src: "/process-board.png", title: "Закрытая доска группы", text: "Решения каждого ученика и личная проверка прямо во время занятия", kind: "wide" },
-  { src: "/process-stats.png", title: "Контроль ДЗ и пробников", text: "Видно не ощущение прогресса, а конкретные цифры", kind: "wide" },
-  { src: "/process-checklist.png", title: "Личный маршрут", text: "Чек-лист тем от базы до сложных задач уровня S", kind: "wide" },
-  { src: "/process-course.png", title: "Python с нуля", text: "Бесплатный курс уже прошли более 600 учеников", kind: "wide" },
-  { src: "/community-results.png", title: "Честная обратная связь", text: "Итоги года, опросы учеников и разбор того, что действительно помогает", kind: "tall" },
-  { src: "/community-file.png", title: "Файлы и шпаргалки", text: "Дополнительные материалы остаются под рукой весь год", kind: "tall" },
-  { src: "/community-guide.png", title: "Помощь за пределами ЕГЭ", text: "Чек-листы по поступлению и выбору направления", kind: "tall" },
-  { src: "/community-tournament.png", title: "Живое сообщество", text: "Турниры, активности и общение вне расписания", kind: "tall" },
-  { src: "/community-post.png", title: "Без скучного официоза", text: "Полезный контент на языке, который хочется читать", kind: "tall" },
+  { src: "/process-plan.png", title: "Весь год разложен по шагам", text: "38 занятий, темы, даты, посещаемость и ссылки на записи собраны в одном понятном плане", label: "ПЛАН ОБУЧЕНИЯ" },
+  { src: "/process-board.png", title: "Каждый работает на своей доске", text: "Артём видит решения всех учеников, отмечает ошибки и разбирает их прямо во время занятия", label: "ЗАКРЫТАЯ ДОСКА" },
+  { src: "/process-stats.png", title: "Прогресс нельзя потерять из виду", text: "Домашние задания и пробники превращаются в понятную статистику, а не остаются ощущением", label: "КОНТРОЛЬ РЕЗУЛЬТАТА" },
+  { src: "/process-course.png", title: "Python с нуля уже внутри", text: "Бесплатный курс прошли более 600 учеников — база по программированию всегда доступна для повторения", label: "БОНУСНЫЙ КУРС" },
 ];
 
 export default function Home() {
@@ -62,7 +56,7 @@ export default function Home() {
         <nav aria-label="Основная навигация">
           <a href="#format">Форматы</a><a href="#results">Результаты</a><a href="#about">Обо мне</a><a href="#reviews">Отзывы</a>
         </nav>
-        <div className="navRight"><div className="topSocials"><a href="https://t.me/AA_infa" target="_blank" rel="noreferrer" aria-label="Telegram">TG</a><a href="https://www.tiktok.com/@aa_infa" target="_blank" rel="noreferrer" aria-label="TikTok">TT</a></div><a className="navCta" href={tgTrial} target="_blank" rel="noreferrer">Бесплатная диагностика <span>↗</span></a></div>
+        <div className="navRight"><div className="topSocials"><a href="https://t.me/AA_infa" target="_blank" rel="noreferrer" aria-label="Мой Telegram"><i>✈</i><span>Мой Telegram</span></a><a href="https://www.tiktok.com/@aa_infa" target="_blank" rel="noreferrer" aria-label="Мой TikTok"><i>♪</i><span>Мой TikTok</span></a></div><a className="navCta" href={tgTrial} target="_blank" rel="noreferrer">Бесплатная диагностика <span>↗</span></a></div>
       </header>
 
       <section className="hero shell" id="top">
@@ -119,7 +113,7 @@ export default function Home() {
 
       <section className="inside shell" id="inside">
         <div className="sectionHead"><div><div className="sectionTag">[ INSIDE_THE_SYSTEM ]</div><h2>Вот что находится<br /><em>внутри подготовки</em></h2></div><p>Не обещания на словах, а реальная рабочая система: занятия, проверка, аналитика, материалы и комьюнити</p></div>
-        <div className="screenWall">{learningScreens.map((item, i) => <article className={`screenCard ${item.kind}`} key={item.src} style={{ "--delay": `${i * -0.35}s` } as CSSProperties}><div className="screenImage"><img src={item.src} alt={item.title} loading="lazy" /><span>0{i + 1}</span></div><div><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>
+        <div className="screenWall">{learningScreens.map((item, i) => <article className="screenCard" key={item.src} style={{ "--delay": `${i * -0.35}s` } as CSSProperties}><div className="screenImage"><img src={item.src} alt={item.title} loading="lazy" /><span>0{i + 1}</span></div><div className="screenCopy"><small>{item.label}</small><h3>{item.title}</h3><p>{item.text}</p><b>РЕАЛЬНЫЙ МАТЕРИАЛ УЧЕНИКОВ ↗</b></div></article>)}</div>
       </section>
 
       <section className="about shell" id="about">
@@ -130,7 +124,7 @@ export default function Home() {
       <section className="reviews shell" id="reviews">
         <div className="sectionHead"><div><div className="sectionTag">[ STUDENT_FEEDBACK ]</div><h2>Результаты, которые<br /><em>говорят сами</em></h2></div><a className="button ghost" href="https://t.me/aa_otzivi" target="_blank" rel="noreferrer">Все отзывы в Telegram ↗</a></div>
         <div className="reviewGrid">{reviews.map((r,i) => <article key={r.name}><div className="reviewTop"><span>0{i+1}</span><div className="stars">★★★★★</div></div><p>«{r.text}»</p><div className="reviewPerson"><i>{r.name[0]}</i><div><strong>{r.name}</strong><small>{r.score}</small></div></div></article>)}</div>
-        <div className="externalReviews"><span>Ещё больше реальных отзывов</span><span className="avitoPending">Avito — ссылка обновляется</span></div>
+        <div className="externalReviews"><span>Ещё больше реальных отзывов</span><a href="https://www.avito.ru/brands/aainfa" target="_blank" rel="noreferrer">Отзывы на Avito ↗</a></div>
       </section>
 
       <section className="trial shell">
