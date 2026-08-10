@@ -27,12 +27,20 @@ test("renders the Artem Alexandrovich landing page", async () => {
   assert.match(html, /Вот что находится/);
   assert.match(html, /process-plan\.png/);
   assert.match(html, /process-board\.png/);
-  assert.match(html, /process-stats\.png/);
+  assert.match(html, /process-stats-redacted\.png/);
   assert.match(html, /process-course\.png/);
   assert.match(html, /og\.png/);
   assert.doesNotMatch(html, /Артём Алексеев/);
   assert.doesNotMatch(html, /83,2/);
   assert.doesNotMatch(html, /1,5–2/);
+  assert.match(html, /score = <b>100/);
+  assert.match(html, /Мгновенная обратная связь/);
+  assert.match(html, /Личное внимание каждому ученику/);
+  assert.match(html, /Авторская проверка работ/);
+  assert.match(html, /СКОРО/);
+  assert.match(html, /30 минут/);
+  assert.doesNotMatch(html, /Личная связь с Артёмом/);
+  assert.doesNotMatch(html, /Артём сам проверяет/);
 });
 
 test("keeps core conversion links available", async () => {

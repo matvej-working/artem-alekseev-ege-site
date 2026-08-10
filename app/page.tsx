@@ -5,12 +5,12 @@ import { useEffect, useState, type CSSProperties } from "react";
 const tgTrial = "https://t.me/aa_infa_bot";
 
 const advantages = [
-  ["01", "Записи каждого занятия", "Можно вернуться к любой теме в течение года и спокойно пересмотреть объяснение"],
-  ["02", "Своя платформа с ДЗ", "Домашки, разбор каждого задания и понятная статистика прогресса — в одном месте"],
-  ["03", "Личная проверка", "Артём сам проверяет работы, отмечает ошибки и помогает разобраться в сложных задачах"],
-  ["04", "Мини-группы 4–6 человек", "Достаточно динамики, чтобы не было скучно, и достаточно внимания каждому ученику"],
-  ["05", "Всегда можно спросить", "Вопросы не копятся до следующего урока — помощь доступна и между занятиями"],
-  ["06", "План на весь год", "Темы идут в понятном порядке, а прогресс по занятиям, ДЗ и пробникам всегда виден"],
+  ["01", "Мини-группы 4–6 человек", "Достаточно динамики, чтобы не было скучно, и достаточно внимания каждому ученику", "👥"],
+  ["02", "Всегда можно спросить", "Вопросы не копятся до следующего урока — я остаюсь на связи и между занятиями", "?"],
+  ["03", "Личная проверка", "Я сам проверяю работы, отмечаю ошибки и помогаю разобраться в сложных задачах", "✓"],
+  ["04", "План на весь год", "Темы идут в понятном порядке, а прогресс по занятиям, ДЗ и пробникам всегда виден", "▤"],
+  ["05", "Своя платформа с ДЗ", "Домашки, разбор каждого задания и понятная статистика прогресса — в одном месте", "⌘"],
+  ["06", "Записи каждого занятия", "Можно вернуться к любой теме в течение года и спокойно пересмотреть объяснение", "▶"],
 ];
 
 const reviews = [
@@ -21,15 +21,15 @@ const reviews = [
 
 const faqs = [
   ["Сколько человек в группе?", "В мини-группе занимаются 4–6 учеников — так сохраняется командная атмосфера, но внимания хватает каждому"],
-  ["Что будет, если пропустить занятие?", "Каждый урок записывается и остаётся у ученика — занятие можно посмотреть в удобное время и задать вопросы Артёму"],
-  ["Кто проверяет домашние задания?", "Все домашние задания Артём проверяет лично — к заданиям есть разборы, а ошибки и прогресс фиксируются на платформе"],
+  ["Что будет, если пропустить занятие?", "Каждый урок записывается и остаётся у ученика — занятие можно посмотреть в удобное время, а вопрос задать мне"],
+  ["Кто проверяет домашние задания?", "Все домашние задания я проверяю лично — к заданиям есть разборы, а ошибки и прогресс фиксируются на платформе"],
   ["Как проходят занятия?", "Полностью онлайн в Zoom — одно занятие длится 1.5–2 часа, расписание подбирается под конкретную группу"],
 ];
 
 const learningScreens = [
   { src: "/process-plan.png", title: "Весь год разложен по шагам", text: "38 занятий, темы, даты, посещаемость и ссылки на записи собраны в одном понятном плане", label: "ПЛАН ОБУЧЕНИЯ" },
-  { src: "/process-board.png", title: "Каждый работает на своей доске", text: "Артём видит решения всех учеников, отмечает ошибки и разбирает их прямо во время занятия", label: "ЗАКРЫТАЯ ДОСКА" },
-  { src: "/process-stats.png", title: "Прогресс нельзя потерять из виду", text: "Домашние задания и пробники превращаются в понятную статистику, а не остаются ощущением", label: "КОНТРОЛЬ РЕЗУЛЬТАТА" },
+  { src: "/process-board.png", title: "Каждый работает на своей доске", text: "Я вижу решения всех учеников, отмечаю ошибки и разбираю их прямо во время занятия", label: "ЗАКРЫТАЯ ДОСКА" },
+  { src: "/process-stats-redacted.png", title: "Прогресс нельзя потерять из виду", text: "Домашние задания и пробники превращаются в понятную статистику, а не остаются ощущением", label: "КОНТРОЛЬ РЕЗУЛЬТАТА" },
   { src: "/process-course.png", title: "Python с нуля уже внутри", text: "Бесплатный курс прошли более 600 учеников — база по программированию всегда доступна для повторения", label: "БОНУСНЫЙ КУРС" },
 ];
 
@@ -72,7 +72,7 @@ export default function Home() {
           <div className="heroMeta"><span>Диагностика знаний</span><span>Курс по Python в подарок</span><span>Чек-листы подготовки</span></div>
         </div>
         <div className="heroVisual">
-          <div className="code codeOne">score = <b>98</b></div>
+          <div className="code codeOne">score = <b>100</b></div>
           <div className="code codeTwo">while not ready:<br />&nbsp;&nbsp;practice()</div>
           <img src="/artem-hero.jpg" alt="Артём Александрович — преподаватель информатики" />
           <div className="scoreCard"><small>СРЕДНИЙ БАЛЛ 2026</small><strong>83.2</strong><span>из 100</span></div>
@@ -82,10 +82,7 @@ export default function Home() {
 
       <div className="ticker" aria-hidden="true">
         <div className="tickerTrack">
-          <span>ЕГЭ ПО ИНФОРМАТИКЕ <b>✦</b> MINI GROUPS <b>✦</b> PYTHON <b>✦</b> ЛИЧНАЯ ПРОВЕРКА <b>✦</b> ЗАПИСИ ЗАНЯТИЙ <b>✦</b></span>
-          <span>ЕГЭ ПО ИНФОРМАТИКЕ <b>✦</b> MINI GROUPS <b>✦</b> PYTHON <b>✦</b> ЛИЧНАЯ ПРОВЕРКА <b>✦</b> ЗАПИСИ ЗАНЯТИЙ <b>✦</b></span>
-          <span>ЕГЭ ПО ИНФОРМАТИКЕ <b>✦</b> MINI GROUPS <b>✦</b> PYTHON <b>✦</b> ЛИЧНАЯ ПРОВЕРКА <b>✦</b> ЗАПИСИ ЗАНЯТИЙ <b>✦</b></span>
-          <span>ЕГЭ ПО ИНФОРМАТИКЕ <b>✦</b> MINI GROUPS <b>✦</b> PYTHON <b>✦</b> ЛИЧНАЯ ПРОВЕРКА <b>✦</b> ЗАПИСИ ЗАНЯТИЙ <b>✦</b></span>
+          {[0, 1, 2, 3].map((item) => <span key={item}>БЕЗ ЗУБРЁЖКИ <b>✦</b> БЕЗ ЛИШНЕЙ ВОДЫ <b>✦</b> ОТ ТЕОРИИ К ПРАКТИКЕ <b>✦</b> ПОНЯТНЫЕ АЛГОРИТМЫ <b>✦</b> РЕШАЕМ САМИ <b>✦</b> РАЗБИРАЕМ ОШИБКИ <b>✦</b> ДВИГАЕМСЯ К 80+ <b>✦</b></span>)}
         </div>
       </div>
 
@@ -102,15 +99,15 @@ export default function Home() {
       <section className="formats shell" id="format">
         <div className="sectionHead"><div><div className="sectionTag">[ FORMAT_SELECTION ]</div><h2>Выбери свой<br /><em>формат подготовки</em></h2></div><p>Можно начать с бесплатного пробного: определим уровень, обозначим цель и подберём подходящий темп</p></div>
         <div className="priceGrid">
-          <article className="priceCard anchor"><div className="priceTop"><span>01 / PERSONAL</span><b>Максимум внимания</b></div><h3>Индивидуально</h3><p>Работа один на один: программа и скорость полностью подстраиваются под тебя</p><ul><li>Персональный план</li><li>Гибкое расписание</li><li>Личная связь с Артёмом</li></ul><div className="price"><strong>5 000 ₽</strong><span>/ час</span></div><a href={tgTrial} target="_blank" rel="noreferrer">Выбрать формат <span>↗</span></a></article>
-          <article className="priceCard featured"><div className="popular">ПОПУЛЯРНЫЙ ФОРМАТ</div><div className="priceTop"><span>02 / MINI GROUP</span><b>Баланс и результат</b></div><h3>Мини-группа</h3><p>Живые занятия в Zoom по 1.5–2 часа — в группе всего 4–6 человек</p><ul><li>Запись каждого урока</li><li>Своя платформа с ДЗ</li><li>Личная проверка работ</li></ul><div className="price groupPrice"><span className="oldPrice">12 500 ₽</span><strong>10 000 ₽ <small>/ месяц</small></strong><b>2 500 ₽ за одно занятие</b></div><a href={tgTrial} target="_blank" rel="noreferrer">Попробовать бесплатно <span>↗</span></a></article>
-          <article className="priceCard"><div className="priceTop"><span>03 / COURSE</span><b>В своём темпе</b></div><h3>Онлайн-курс</h3><p>Последовательная программа для самостоятельной подготовки с понятной системой</p><ul><li>Структура по темам ЕГЭ</li><li>Практические задания</li><li>Материалы в одном месте</li></ul><div className="price"><strong>4 990 ₽</strong><span>/ доступ к курсу</span></div><a href={tgTrial} target="_blank" rel="noreferrer">Узнать подробнее <span>↗</span></a></article>
+          <article className="priceCard anchor"><div className="priceTop"><span>01 / PERSONAL</span><b>Максимум внимания</b></div><h3>Индивидуально</h3><p>Работа один на один: программа и скорость полностью подстраиваются под тебя</p><ul><li>Персональный план</li><li>Гибкое расписание</li><li>Мгновенная обратная связь</li></ul><div className="price"><strong>5 000 ₽</strong><span>/ час</span></div><a href={tgTrial} target="_blank" rel="noreferrer">Узнать подробнее <span>↗</span></a></article>
+          <article className="priceCard featured"><div className="popular">ПОПУЛЯРНЫЙ ФОРМАТ</div><div className="priceTop"><span>02 / MINI GROUP</span><b>Баланс и результат</b></div><h3>Мини-группа</h3><p>Живые занятия в Zoom по 1.5–2 часа — в группе всего 4–6 человек</p><ul><li>Личное внимание каждому ученику</li><li>Своя платформа с ДЗ</li><li>Авторская проверка работ</li></ul><div className="price groupPrice"><span className="oldPrice">12 500 ₽</span><strong>10 000 ₽ <small>/ месяц</small></strong><b>2 500 ₽ за одно занятие</b></div><a href={tgTrial} target="_blank" rel="noreferrer">Узнать подробнее <span>↗</span></a></article>
+          <article className="priceCard"><div className="priceTop"><span>03 / COURSE</span><b>В своём темпе</b></div><h3>Онлайн-курс</h3><p>Последовательная программа для самостоятельной подготовки с понятной системой</p><ul><li>Структура по темам ЕГЭ</li><li>Практические задания</li><li>Материалы в одном месте</li></ul><div className="price"><strong>СКОРО</strong></div><a href={tgTrial} target="_blank" rel="noreferrer">Узнать подробнее <span>↗</span></a></article>
         </div>
       </section>
 
       <section className="system shell">
         <div className="sectionHead"><div><div className="sectionTag">[ SYSTEM_ADVANTAGES ]</div><h2>Не просто уроки<br /><em>Система подготовки</em></h2></div></div>
-        <div className="advGrid">{advantages.map(([n,t,d]) => <article key={n}><span>{n}</span><div className="advIcon">{n === "01" ? "▶" : n === "02" ? "⌘" : n === "03" ? "✓" : n === "04" ? "👥" : n === "05" ? "?" : "▤"}</div><h3>{t}</h3><p>{d}</p></article>)}</div>
+        <div className="advGrid">{advantages.map(([n,t,d,icon]) => <article key={n}><span>{n}</span><div className="advIcon">{icon}</div><h3>{t}</h3><p>{d}</p></article>)}</div>
       </section>
 
       <section className="inside shell" id="inside">
@@ -130,7 +127,7 @@ export default function Home() {
       </section>
 
       <section className="trial shell">
-        <div className="trialOrb" /><div className="trialRing ringOne" /><div className="trialRing ringTwo" /><div className="trialBadge">0 ₽ · БЕЗ ОБЯЗАТЕЛЬСТВ</div><div className="sectionTag">[ FREE_TRIAL_ACCESS ]</div><h2>Начни с бесплатного<br /><em>пробного занятия</em></h2><p>Определим твой уровень, найдём пробелы и составим понятный маршрут подготовки — в подарок курс по Python и чек-листы</p><a className="button light trialButton" href={tgTrial} target="_blank" rel="noreferrer"><span>Забронировать диагностику</span><b>↗</b></a><div className="trialCode">if goal == 90+:<br />&nbsp;&nbsp;start_today()</div><div className="trialNote">15 минут, чтобы понять точку старта<br />и следующий шаг</div>
+        <div className="trialOrb" /><div className="trialRing ringOne" /><div className="trialRing ringTwo" /><div className="trialBadge">0 ₽ · БЕЗ ОБЯЗАТЕЛЬСТВ</div><div className="sectionTag">[ FREE_TRIAL_ACCESS ]</div><h2>Начни с бесплатного<br /><em>пробного занятия</em></h2><p>Определим твой уровень, найдём пробелы и составим понятный маршрут подготовки — в подарок курс по Python и чек-листы</p><a className="button light trialButton" href={tgTrial} target="_blank" rel="noreferrer"><span>Забронировать диагностику</span><b>↗</b></a><div className="trialCode">if goal == 90+:<br />&nbsp;&nbsp;start_today()</div><div className="trialNote">30 минут, чтобы понять точку старта<br />и следующий шаг</div>
       </section>
 
       <section className="faq shell">

@@ -168,3 +168,16 @@
 .inside .screenCopy b{display:none}
 @media(max-width:800px){.inside .screenWall{gap:70px}.inside .screenCard .screenCopy,.inside .screenCard:nth-child(even) .screenCopy,.inside .screenCard>div:last-child{grid-template-columns:1fr;padding-top:24px}.inside .screenCopy small{grid-row:auto;margin:0 0 14px}.inside .screenImage span{width:36px;height:36px;right:12px;top:12px}}
 @media(max-width:650px){.topSocials{display:flex;gap:6px}.topSocials a{min-width:74px;height:38px;padding:0 10px;font-size:9px}.inside .screenCard .screenImage,.inside .screenCard:nth-child(even) .screenImage{border-radius:16px}.inside .screenCard .screenImage:before{box-shadow:inset 25px 0 32px -24px rgba(5,5,8,.72),inset -25px 0 32px -24px rgba(5,5,8,.72)}}
+
+/* Final feedback pass */
+.navCta{position:relative;overflow:hidden;isolation:isolate;animation:navCtaBreath 3.4s ease-in-out infinite}
+.navCta:before{content:"";position:absolute;z-index:-1;inset:-2px;background:linear-gradient(105deg,transparent 22%,rgba(178,111,255,.2) 42%,rgba(255,255,255,.22) 50%,rgba(178,111,255,.2) 58%,transparent 78%);transform:translateX(-120%);animation:navCtaSweep 4.2s ease-in-out infinite}
+.navCta span{display:inline-block;animation:navCtaArrow 2s ease-in-out infinite}
+.navCta:hover{transform:translateY(-3px);border-color:#a66dff;background:rgba(117,59,215,.22);box-shadow:0 18px 48px rgba(106,48,255,.28)}
+@keyframes navCtaBreath{0%,100%{box-shadow:0 10px 30px rgba(87,34,190,.14)}50%{box-shadow:0 14px 42px rgba(133,67,255,.3);border-color:#8f55ec}}
+@keyframes navCtaSweep{0%,38%{transform:translateX(-120%)}72%,100%{transform:translateX(120%)}}
+@keyframes navCtaArrow{0%,100%{transform:translate(0,0)}50%{transform:translate(4px,-4px)}}
+.inside .screenCard:last-child .screenImage:after{background:linear-gradient(180deg,rgba(155,98,255,.03) 0,transparent 66%,rgba(44,17,77,.2) 82%,rgba(7,7,10,.72) 100%)}
+.inside .screenCard:last-child .screenImage{box-shadow:0 42px 125px rgba(37,12,75,.55),0 0 80px rgba(107,48,222,.17)}
+.inside .screenCard:last-child .screenCopy{margin-top:-28px;padding-top:70px;background:radial-gradient(ellipse at 38% 0,rgba(104,40,255,.15),transparent 68%);position:relative;z-index:3}
+@media(max-width:650px){.navCta{animation-duration:4s}.inside .screenCard:last-child .screenCopy{margin-top:-15px;padding-top:45px}}
