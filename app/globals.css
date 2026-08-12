@@ -107,7 +107,7 @@
 @keyframes gridFlow{to{background-position:45px 45px}}
 @keyframes badgeFloat{50%{transform:translateY(-7px);box-shadow:0 10px 35px rgba(183,255,102,.13)}}
 @media(max-width:1000px){.screenCard,.screenCard.wide{grid-column:span 6}}
-@media(max-width:650px){.topSocials{display:none}.navCta{font-size:0;width:45px;height:45px;padding:0;display:grid;place-items:center}.navCta span{font-size:19px;margin:0}.hero h1{font-size:47px}.inside{padding:65px 0}.screenWall{display:block}.screenCard,.screenCard.wide{margin-bottom:16px;animation:none}.screenImage img,.screenCard.tall .screenImage img{height:280px}.trial{padding:80px 20px;min-height:580px}.trialButton{min-width:0}.trialNote{left:20px;bottom:20px}.trialCode{display:none}}
+@media(max-width:650px){.topSocials{display:none}.navCta{font-size:9px;line-height:1.05;text-align:left;width:145px;height:45px;padding:0 11px;display:flex;align-items:center;justify-content:space-between;gap:7px}.navCta span{font-size:17px;margin:0;flex:none}.hero h1{font-size:47px}.inside{padding:65px 0}.screenWall{display:block}.screenCard,.screenCard.wide{margin-bottom:16px;animation:none}.screenImage img,.screenCard.tall .screenImage img{height:280px}.trial{padding:80px 20px;min-height:580px}.trialButton{min-width:0}.trialNote{left:20px;bottom:20px}.trialCode{display:none}}
 
 /* Motion pass */
 .ticker .tickerTrack{display:flex;width:max-content;animation:marquee 26s linear infinite;will-change:transform}
@@ -168,6 +168,7 @@
 .inside .screenCopy b{display:none}
 @media(max-width:800px){.inside .screenWall{gap:70px}.inside .screenCard .screenCopy,.inside .screenCard:nth-child(even) .screenCopy,.inside .screenCard>div:last-child{grid-template-columns:1fr;padding-top:24px}.inside .screenCopy small{grid-row:auto;margin:0 0 14px}.inside .screenImage span{width:36px;height:36px;right:12px;top:12px}}
 @media(max-width:650px){.topSocials{display:flex;gap:6px}.topSocials a{min-width:74px;height:38px;padding:0 10px;font-size:9px}.inside .screenCard .screenImage,.inside .screenCard:nth-child(even) .screenImage{border-radius:16px}.inside .screenCard .screenImage:before{box-shadow:inset 25px 0 32px -24px rgba(5,5,8,.72),inset -25px 0 32px -24px rgba(5,5,8,.72)}}
+@media(max-width:380px){.shell{width:calc(100% - 20px)}.navRight{gap:8px}.topSocials a{min-width:60px;padding:0 6px;font-size:8px}.navCta{width:134px;padding:0 9px;font-size:8px}}
 
 /* Final feedback pass */
 .navCta{position:relative;overflow:hidden;isolation:isolate;animation:navCtaBreath 3.4s ease-in-out infinite}
