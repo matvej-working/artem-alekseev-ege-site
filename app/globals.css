@@ -178,10 +178,9 @@
 @keyframes navCtaBreath{0%,100%{box-shadow:0 10px 30px rgba(87,34,190,.14)}50%{box-shadow:0 14px 42px rgba(133,67,255,.3);border-color:#8f55ec}}
 @keyframes navCtaSweep{0%,38%{transform:translateX(-120%)}72%,100%{transform:translateX(120%)}}
 @keyframes navCtaArrow{0%,100%{transform:translate(0,0)}50%{transform:translate(4px,-4px)}}
-.inside .screenCard:last-child{position:relative;isolation:isolate;padding-bottom:72px!important}
-.inside .screenCard:last-child:before{content:"";position:absolute;z-index:4;left:-9%;right:-9%;bottom:-2px;height:175px;background:linear-gradient(180deg,rgba(7,7,10,0) 0,rgba(7,7,10,.18) 28%,rgba(7,7,10,.72) 72%,#07070a 100%);filter:blur(.2px);pointer-events:none}
-.inside .screenCard:last-child:after{content:"";position:absolute;z-index:2;inset:-30px -9% 34px;background:linear-gradient(90deg,#07070a 0,rgba(7,7,10,.82) 2.5%,transparent 11%,transparent 89%,rgba(7,7,10,.82) 97.5%,#07070a 100%);pointer-events:none}
-.inside .screenCard:last-child .screenImage:after{background:linear-gradient(180deg,rgba(155,98,255,.03) 0,transparent 58%,rgba(35,14,63,.26) 78%,rgba(7,7,10,.88) 100%)}
-.inside .screenCard:last-child .screenImage{z-index:1;box-shadow:0 42px 125px rgba(37,12,75,.55),0 0 80px rgba(107,48,222,.17)}
-.inside .screenCard:last-child .screenCopy{margin-top:-28px;padding-top:70px;background:radial-gradient(ellipse at 38% 0,rgba(104,40,255,.15),transparent 68%);position:relative;z-index:3}
-@media(max-width:650px){.navCta{animation-duration:4s}.inside .screenCard:last-child{padding-bottom:48px!important}.inside .screenCard:last-child:before{left:-16%;right:-16%;height:135px}.inside .screenCard:last-child:after{left:-16%;right:-16%}.inside .screenCard:last-child .screenCopy{margin-top:-15px;padding-top:45px}}
+/* Long answers stay inside the animated accordion row */
+.faqAnswer{overflow:hidden;margin-left:60px;max-width:780px}
+.faqList article>div .faqAnswer p{overflow:visible;margin:0 0 12px;max-width:none;color:#9993a0;line-height:1.7}
+.faqList article>div .faqAnswer p:last-child{margin-bottom:0}
+.faqList article.open>div .faqAnswer{padding-bottom:28px}
+@media(max-width:650px){.navCta{animation-duration:4s}.faqAnswer{margin-left:36px}.faqList article>div .faqAnswer p{margin-left:0}}

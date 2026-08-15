@@ -45,7 +45,7 @@ test("renders the Artem Alexandrovich landing page", async () => {
 
 test("keeps core conversion links available", async () => {
   const html = await (await render()).text();
-  assert.match(html, /https:\/\/t\.me\/aa_infa_bot/);
+  assert.match(html, /https:\/\/t\.me\/m\/zBUY8TsdNjYy/);
   assert.match(html, /https:\/\/t\.me\/AA_infa/);
   assert.match(html, /https:\/\/www\.tiktok\.com\/@aa_infa/);
   assert.match(html, /https:\/\/t\.me\/aa_otzivi/);
