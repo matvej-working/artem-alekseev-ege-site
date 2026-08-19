@@ -29,6 +29,11 @@ test("renders the Artem Alexandrovich landing page", async () => {
   assert.match(html, /process-board\.png/);
   assert.match(html, /process-stats-redacted\.png/);
   assert.match(html, /process-course\.png/);
+  for (let index = 1; index <= 7; index += 1) {
+    assert.match(html, new RegExp(`reviews/review-${index}\\.jpg`));
+  }
+  assert.doesNotMatch(html, /Уроки были очень ценными/);
+  assert.doesNotMatch(html, /Много практики, большая подборка домашек/);
   assert.match(html, /og\.png/);
   assert.doesNotMatch(html, /Артём Алексеев/);
   assert.doesNotMatch(html, /83,2/);

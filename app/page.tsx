@@ -13,11 +13,10 @@ const advantages = [
   ["06", "Записи каждого занятия", "Можно вернуться к любой теме в течение года и спокойно пересмотреть объяснение", "▶"],
 ];
 
-const reviews = [
-  { name: "Слава", score: "93 балла", text: "Уроки были очень ценными, информативными и, главное, понятными — все эти 93 балла просто так не набирают!" },
-  { name: "Аня", score: "85 баллов", text: "Много практики, большая подборка домашек и оперативная проверка — все задания понятно разобраны, прогресс налицо" },
-  { name: "Женя", score: "88 баллов", text: "Объяснения понятные, всегда можно уточнить — ещё один большой плюс: подробные видеоразборы домашних заданий" },
-];
+const reviewCards = Array.from({ length: 7 }, (_, index) => ({
+  src: `/reviews/review-${index + 1}.jpg`,
+  alt: `Отзыв и результат ученика — карточка ${index + 1}`,
+}));
 
 const faqs = [
   ["Подойдут ли занятия, если я начинаю подготовку почти с нуля?", [
@@ -70,6 +69,7 @@ const learningScreens = [
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState(0);
+  const [reviewIndex, setReviewIndex] = useState(0);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -157,7 +157,18 @@ export default function Home() {
 
       <section className="reviews shell" id="reviews">
         <div className="sectionHead"><div><div className="sectionTag">[ STUDENT_FEEDBACK ]</div><h2>Результаты, которые<br /><em>говорят сами</em></h2></div><a className="button ghost" href="https://t.me/aa_otzivi" target="_blank" rel="noreferrer">Все отзывы в Telegram ↗</a></div>
-        <div className="reviewGrid">{reviews.map((r,i) => <article key={r.name}><div className="reviewTop"><span>0{i+1}</span><div className="stars">★★★★★</div></div><p>«{r.text}»</p><div className="reviewPerson"><i>{r.name[0]}</i><div><strong>{r.name}</strong><small>{r.score}</small></div></div></article>)}</div>
+        <div className="reviewShowcase">
+          <div className="reviewCounter"><span>{String(reviewIndex + 1).padStart(2, "0")}</span><i /><span>{String(reviewCards.length).padStart(2, "0")}</span></div>
+          <a className="reviewStage" href={reviewCards[reviewIndex].src} target="_blank" rel="noreferrer" aria-label="Открыть карточку отзыва в полном размере">
+            <img key={reviewCards[reviewIndex].src} src={reviewCards[reviewIndex].src} alt={reviewCards[reviewIndex].alt} />
+            <span>ОТКРЫТЬ В ПОЛНОМ РАЗМЕРЕ ↗</span>
+          </a>
+          <div className="reviewControls">
+            <button type="button" onClick={() => setReviewIndex((reviewIndex - 1 + reviewCards.length) % reviewCards.length)} aria-label="Предыдущий отзыв">←</button>
+            <div className="reviewThumbs">{reviewCards.map((card, index) => <button className={reviewIndex === index ? "active" : ""} type="button" key={card.src} onClick={() => setReviewIndex(index)} aria-label={`Показать отзыв ${index + 1}`} aria-current={reviewIndex === index ? "true" : undefined}><img src={card.src} alt="" loading="lazy" /></button>)}</div>
+            <button type="button" onClick={() => setReviewIndex((reviewIndex + 1) % reviewCards.length)} aria-label="Следующий отзыв">→</button>
+          </div>
+        </div>
         <div className="externalReviews"><span>Ещё больше реальных отзывов</span><a href="https://www.avito.ru/brands/aainfa" target="_blank" rel="noreferrer">Отзывы на Avito ↗</a></div>
       </section>
 

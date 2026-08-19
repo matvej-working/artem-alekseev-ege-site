@@ -184,3 +184,29 @@
 .faqList article>div .faqAnswer p:last-child{margin-bottom:0}
 .faqList article.open>div .faqAnswer{padding-bottom:28px}
 @media(max-width:650px){.navCta{animation-duration:4s}.faqAnswer{margin-left:36px}.faqList article>div .faqAnswer p{margin-left:0}}
+
+/* Student result cards */
+.reviewShowcase{position:relative;padding:22px;border:1px solid rgba(155,98,255,.34);border-radius:24px;background:radial-gradient(circle at 50% 10%,rgba(113,55,220,.18),transparent 48%),#0b0a10;box-shadow:0 38px 110px rgba(0,0,0,.42),0 0 80px rgba(104,42,223,.08);overflow:hidden}
+.reviewShowcase:before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(155,98,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(155,98,255,.035) 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(#000,transparent 92%)}
+.reviewCounter{position:absolute;z-index:4;left:42px;top:42px;display:flex;align-items:center;gap:10px;padding:10px 13px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(8,7,12,.76);backdrop-filter:blur(14px);font:700 10px var(--font-mono);letter-spacing:.12em}
+.reviewCounter i{width:28px;height:1px;background:linear-gradient(90deg,var(--violet),rgba(255,255,255,.25))}
+.reviewCounter span:last-child{color:#77717f}
+.reviewStage{position:relative;z-index:2;display:block;overflow:hidden;border-radius:17px;border:1px solid rgba(255,255,255,.13);background:#100817;box-shadow:0 22px 70px rgba(0,0,0,.5);aspect-ratio:4/3}
+.reviewStage:after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 70px rgba(6,3,12,.32);transition:.35s}
+.reviewStage:hover:after{box-shadow:inset 0 0 30px rgba(6,3,12,.12)}
+.reviewStage img{width:100%;height:100%;display:block;object-fit:cover;animation:reviewReveal .48s cubic-bezier(.2,.75,.25,1) both;transition:transform .65s cubic-bezier(.2,.75,.25,1)}
+.reviewStage:hover img{transform:scale(1.012)}
+.reviewStage>span{position:absolute;z-index:3;right:18px;bottom:18px;padding:10px 13px;border:1px solid rgba(255,255,255,.18);border-radius:9px;background:rgba(8,7,12,.74);backdrop-filter:blur(12px);font:700 9px var(--font-mono);letter-spacing:.1em;color:#d7d0df;opacity:0;transform:translateY(6px);transition:.3s}
+.reviewStage:hover>span,.reviewStage:focus-visible>span{opacity:1;transform:none}
+.reviewControls{position:relative;z-index:3;display:grid;grid-template-columns:54px minmax(0,1fr) 54px;gap:12px;align-items:center;margin-top:16px}
+.reviewControls>button{width:54px;height:54px;border:1px solid rgba(255,255,255,.14);border-radius:13px;background:#111018;color:white;font-size:21px;cursor:pointer;transition:.25s}
+.reviewControls>button:hover{border-color:var(--violet);background:rgba(125,65,226,.2);transform:translateY(-2px)}
+.reviewThumbs{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:9px}
+.reviewThumbs button{position:relative;padding:0;border:1px solid rgba(255,255,255,.1);border-radius:9px;overflow:hidden;aspect-ratio:4/3;background:#111;cursor:pointer;opacity:.45;transition:.3s}
+.reviewThumbs button:after{content:"";position:absolute;inset:0;border:2px solid transparent;border-radius:8px;transition:.3s}
+.reviewThumbs button:hover{opacity:.78;transform:translateY(-2px)}
+.reviewThumbs button.active{opacity:1;border-color:rgba(172,111,255,.75);box-shadow:0 8px 28px rgba(121,57,233,.3)}
+.reviewThumbs button.active:after{border-color:var(--violet)}
+.reviewThumbs img{width:100%;height:100%;display:block;object-fit:cover}
+@keyframes reviewReveal{from{opacity:.35;transform:scale(.985) translateY(8px)}to{opacity:1;transform:none}}
+@media(max-width:750px){.reviewShowcase{padding:10px;border-radius:17px}.reviewCounter{left:22px;top:22px}.reviewStage{border-radius:12px}.reviewStage>span{display:none}.reviewControls{grid-template-columns:44px minmax(0,1fr) 44px;gap:8px;margin-top:10px}.reviewControls>button{width:44px;height:44px;border-radius:10px}.reviewThumbs{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;padding:2px}.reviewThumbs::-webkit-scrollbar{display:none}.reviewThumbs button{width:72px;min-width:72px}.externalReviews{margin-top:10px}}
