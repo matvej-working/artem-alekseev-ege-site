@@ -13,9 +13,9 @@ const advantages = [
   ["06", "Записи каждого занятия", "Можно вернуться к любой теме в течение года и спокойно пересмотреть объяснение", "▶"],
 ];
 
-const reviewCards = Array.from({ length: 7 }, (_, index) => ({
-  src: `/reviews/review-${index + 1}.jpg`,
-  alt: `Отзыв и результат ученика — карточка ${index + 1}`,
+const reviewCards = [2, 3, 4, 5, 6, 7].map((cardNumber) => ({
+  src: `/reviews/review-${cardNumber}.jpg`,
+  alt: `Отзыв и результат ученика — карточка ${cardNumber}`,
 }));
 
 const faqs = [
