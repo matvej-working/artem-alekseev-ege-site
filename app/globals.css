@@ -210,3 +210,8 @@
 .reviewThumbs img{width:100%;height:100%;display:block;object-fit:cover}
 @keyframes reviewReveal{from{opacity:.35;transform:scale(.985) translateY(8px)}to{opacity:1;transform:none}}
 @media(max-width:750px){.reviewShowcase{padding:10px;border-radius:17px}.reviewCounter{left:22px;top:22px}.reviewStage{border-radius:12px}.reviewStage>span{display:none}.reviewControls{grid-template-columns:44px minmax(0,1fr) 44px;gap:8px;margin-top:10px}.reviewControls>button{width:44px;height:44px;border-radius:10px}.reviewThumbs{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;padding:2px}.reviewThumbs::-webkit-scrollbar{display:none}.reviewThumbs button{width:72px;min-width:72px}.externalReviews{margin-top:10px}}
+
+/* Keep Artem's portrait fully visible at every responsive breakpoint */
+.aboutPhoto{background:#ececea}
+.aboutPhoto img{object-fit:contain;object-position:center}
+@media(max-width:1000px){.aboutPhoto{width:min(620px,100%);height:auto;aspect-ratio:1466/2200;margin-inline:auto}}

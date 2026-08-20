@@ -13,7 +13,7 @@ const advantages = [
   ["06", "Записи каждого занятия", "Можно вернуться к любой теме в течение года и спокойно пересмотреть объяснение", "▶"],
 ];
 
-const reviewCards = [2, 3, 4, 5, 6, 7].map((cardNumber) => ({
+const reviewCards = [1, 2, 3, 4, 5, 6, 7].map((cardNumber) => ({
   src: `/reviews/review-${cardNumber}.jpg`,
   alt: `Отзыв и результат ученика — карточка ${cardNumber}`,
 }));
