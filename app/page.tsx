@@ -126,7 +126,7 @@ export default function Home() {
         <div className="statsGrid">
           <div><strong>83.2</strong><p>средний балл<br />выпускников</p></div>
           <div><strong>98</strong><p>максимальный<br />балл в 2026</p></div>
-          <div><strong>400<span>+</span></strong><p>учеников прошли<br />подготовку</p></div>
+          <div><strong>400<span>+</span></strong><p>учеников прошли подготовку<br />за более 4 лет</p></div>
           <div><strong>600<span>+</span></strong><p>человек прошли<br />курс по Python</p></div>
         </div>
       </section>
@@ -135,7 +135,7 @@ export default function Home() {
         <div className="sectionHead"><div><div className="sectionTag">[ FORMAT_SELECTION ]</div><h2>Выбери свой<br /><em>формат подготовки</em></h2></div><p>Можно начать с бесплатного пробного: определим уровень, обозначим цель и подберём подходящий темп</p></div>
         <div className="priceGrid">
           <article className="priceCard anchor"><div className="priceTop"><span>01 / PERSONAL</span><b>Максимум внимания</b></div><h3>Индивидуально</h3><p>Работа один на один: программа и скорость полностью подстраиваются под тебя</p><ul><li>Персональный план</li><li>Гибкое расписание</li><li>Мгновенная обратная связь</li></ul><div className="price"><strong>5 000 ₽</strong><span>/ час</span></div><a href={tgTrial} target="_blank" rel="noreferrer">Узнать подробнее <span>↗</span></a></article>
-          <article className="priceCard featured"><div className="popular">ПОПУЛЯРНЫЙ ФОРМАТ</div><div className="priceTop"><span>02 / MINI GROUP</span><b>Баланс и результат</b></div><h3>Мини-группа</h3><p>Живые занятия в Zoom по 1.5–2 часа — в группе всего 4–6 человек</p><ul><li>Личное внимание каждому ученику</li><li>Своя платформа с ДЗ</li><li>Авторская проверка работ</li></ul><div className="price groupPrice"><span className="oldPrice">12 500 ₽</span><strong>10 000 ₽ <small>/ месяц</small></strong><b>2 500 ₽ за одно занятие</b></div><a href={tgTrial} target="_blank" rel="noreferrer">Узнать подробнее <span>↗</span></a></article>
+          <article className="priceCard featured"><div className="popular">ПОПУЛЯРНЫЙ ФОРМАТ</div><div className="priceTop"><span>02 / MINI GROUP</span><b>Баланс и результат</b></div><h3>Мини-группа</h3><p>Живые занятия в Zoom по 1.5–2 часа — в группе всего 4–6 человек</p><ul><li>Личное внимание каждому ученику</li><li>Своя платформа с ДЗ</li><li>Авторская проверка работ</li></ul><div className="price groupPrice"><strong>10 000 ₽</strong><span className="groupPricePeriod">/ месяц</span></div><a href={tgTrial} target="_blank" rel="noreferrer">Узнать подробнее <span>↗</span></a></article>
           <article className="priceCard"><div className="priceTop"><span>03 / COURSE</span><b>В своём темпе</b></div><h3>Онлайн-курс</h3><p>Последовательная программа для самостоятельной подготовки с понятной системой</p><ul><li>Структура по темам ЕГЭ</li><li>Практические задания</li><li>Материалы в одном месте</li></ul><div className="price"><strong>СКОРО</strong></div><a href={tgTrial} target="_blank" rel="noreferrer">Узнать подробнее <span>↗</span></a></article>
         </div>
       </section>
@@ -181,7 +181,7 @@ export default function Home() {
         <div className="faqList">{faqs.map(([q,a],i) => <article className={openFaq === i ? "open" : ""} key={q}><button onClick={() => setOpenFaq(openFaq === i ? -1 : i)} aria-expanded={openFaq === i}><span>{String(i + 1).padStart(2, "0")}</span><strong>{q}</strong><i>{openFaq === i ? "−" : "+"}</i></button><div><div className="faqAnswer">{a.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></div></article>)}</div>
       </section>
 
-      <footer className="footer shell"><div className="footerTop"><div><div className="brand"><span>AA</span><b>АРТЁМ АЛЕКСАНДРОВИЧ</b></div><p>Системная подготовка к ЕГЭ по информатике<br />с личной проверкой</p></div><div className="footerLinks"><a href="https://t.me/AA_infa" target="_blank" rel="noreferrer">Telegram ↗</a><a href="https://www.tiktok.com/@aa_infa" target="_blank" rel="noreferrer">TikTok ↗</a><a href="https://t.me/aa_otzivi" target="_blank" rel="noreferrer">Отзывы ↗</a></div><a className="button primary" href={tgTrial} target="_blank" rel="noreferrer">Записаться на пробное ↗</a></div><div className="footerBottom"><span>© 2026 Артём Александрович</span><span>ЕГЭ по информатике · Онлайн</span></div></footer>
+      <footer className="footer shell"><div className="footerTop"><div><div className="brand"><span>AA</span><b>АРТЁМ АЛЕКСАНДРОВИЧ</b></div><p>Системная подготовка к ЕГЭ по информатике<br />с личной проверкой</p></div><div className="footerLinks"><a href="https://t.me/AA_infa" target="_blank" rel="noreferrer">Telegram ↗</a><a href="https://www.tiktok.com/@aa_infa" target="_blank" rel="noreferrer">TikTok ↗</a><a href="https://www.avito.ru/brands/aainfa" target="_blank" rel="noreferrer">Avito ↗</a><a href="https://t.me/aa_otzivi" target="_blank" rel="noreferrer">Отзывы ↗</a></div><a className="button primary" href={tgTrial} target="_blank" rel="noreferrer">Записаться на пробное ↗</a></div><div className="footerBottom"><span>© 2026 Артём Александрович</span><span>ЕГЭ по информатике · Онлайн</span></div></footer>
     </main>
   );
 }

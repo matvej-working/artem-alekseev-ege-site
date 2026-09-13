@@ -22,8 +22,11 @@ test("renders the Artem Alexandrovich landing page", async () => {
   assert.match(html, /Артём Александрович/);
   assert.match(html, /83\.2/);
   assert.match(html, /10 000 ₽/);
-  assert.match(html, /12 500 ₽/);
-  assert.match(html, /2 500 ₽ за одно занятие/);
+  assert.match(html, /\/ месяц/);
+  assert.match(html, /учеников прошли подготовку/);
+  assert.match(html, /за более 4 лет/);
+  assert.doesNotMatch(html, /12 500 ₽/);
+  assert.doesNotMatch(html, /2 500 ₽ за одно занятие/);
   assert.match(html, /Вот что находится/);
   assert.match(html, /process-plan\.png/);
   assert.match(html, /process-board\.png/);
@@ -57,5 +60,6 @@ test("keeps core conversion links available", async () => {
   assert.match(html, /https:\/\/www\.avito\.ru\/brands\/aainfa/);
   assert.match(html, />Telegram</);
   assert.match(html, />TikTok</);
+  assert.match(html, />Avito/);
   assert.match(html, /Бесплатное пробное занятие/);
 });

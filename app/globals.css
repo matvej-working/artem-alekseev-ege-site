@@ -59,11 +59,9 @@
 .heroVisual{perspective:900px}
 .heroVisual img{transition:filter .4s,transform .4s}
 .heroVisual:hover img{filter:saturate(.95) contrast(1.08) brightness(1.04);transform:translateY(-8px) rotateY(-1.5deg) scale(1.015)}
-.groupPrice{position:relative;padding:16px 18px;border:1px solid rgba(183,255,102,.32);border-radius:14px;background:linear-gradient(135deg,rgba(183,255,102,.13),rgba(155,98,255,.1));box-shadow:0 12px 45px rgba(136,255,71,.08)}
-.groupPrice .oldPrice{text-decoration:line-through;color:#77717f;font-size:14px}
+.groupPrice{position:relative;display:flex;align-items:flex-start;flex-direction:column;gap:4px;padding:16px 18px;border:1px solid rgba(183,255,102,.32);border-radius:14px;background:linear-gradient(135deg,rgba(183,255,102,.13),rgba(155,98,255,.1));box-shadow:0 12px 45px rgba(136,255,71,.08)}
 .groupPrice strong{font-size:35px;color:var(--lime);text-shadow:0 0 24px rgba(183,255,102,.22)}
-.groupPrice strong small{font-size:13px;color:#d6e8c2}
-.groupPrice>b{font-size:11px;color:#bbb5c5}
+.groupPrice .groupPricePeriod{font:700 11px var(--font-mono);letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
 .priceCard>a{font-weight:800;font-size:14px}
 .priceCard>a span{font-size:18px;font-weight:950}
 .advIcon{font-size:17px;font-weight:900}
@@ -210,6 +208,10 @@
 .reviewThumbs img{width:100%;height:100%;display:block;object-fit:cover}
 @keyframes reviewReveal{from{opacity:.35;transform:scale(.985) translateY(8px)}to{opacity:1;transform:none}}
 @media(max-width:750px){.reviewShowcase{padding:10px;border-radius:17px}.reviewCounter{left:22px;top:22px}.reviewStage{border-radius:12px}.reviewStage>span{display:none}.reviewControls{grid-template-columns:44px minmax(0,1fr) 44px;gap:8px;margin-top:10px}.reviewControls>button{width:44px;height:44px;border-radius:10px}.reviewThumbs{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;padding:2px}.reviewThumbs::-webkit-scrollbar{display:none}.reviewThumbs button{width:72px;min-width:72px}.externalReviews{margin-top:10px}}
+
+/* Prevent rounded Cyrillic glyphs from being clipped in the hero slogan */
+.hero h1{line-height:.96}
+.hero h1 em{background:none;color:var(--violet);-webkit-text-fill-color:var(--violet)}
 
 /* Keep Artem's portrait fully visible at every responsive breakpoint */
 .aboutPhoto{background:#ececea}

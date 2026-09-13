@@ -6,10 +6,18 @@ const geist = Geist({ variable: "--font-sans", subsets: ["latin", "cyrillic"] })
 const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://artem-alekseev-ege.matvej-working.chatgpt.site"),
+  metadataBase: new URL("https://aainfa.ru"),
   title: "Артём Александрович — подготовка к ЕГЭ по информатике",
   description: "Системная онлайн-подготовка к ЕГЭ по информатике в мини-группах — средний балл выпускников 83.2 и бесплатное пробное занятие",
-  icons: { icon: "/aa-logo.jpg", shortcut: "/aa-logo.jpg" },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     title: "Артём Александрович — ЕГЭ по информатике",
     description: "Живые занятия, личная проверка и понятный маршрут до уверенной сдачи ЕГЭ",
